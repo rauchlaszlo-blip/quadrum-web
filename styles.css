@@ -3,3 +3,6 @@
 
 /* Desktop photo sizing */
 @media(min-width:851px){.photo-img{height:330px}.photo-img.hero-photo{height:360px}.photo-img.small{height:180px}}
+
+/* Mobile square images for table parquet cards only */
+@media(max-width:850px){#tabla .photo-img.small{height:auto;aspect-ratio:1/1;object-fit:cover}}
