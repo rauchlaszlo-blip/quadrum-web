@@ -157,3 +157,15 @@
   .header .brand-sub{font-size:7px;letter-spacing:.34em;margin-top:4px}
   .header .btn{font-size:14px;padding:8px 10px;min-height:40px}
 }
+
+/* Header contact action and simplified contact footer */
+.header-actions{display:flex;align-items:center;gap:8px}
+.header-actions .contact-btn{background:transparent;color:var(--dark);border:1px solid var(--dark)}
+#kapcsolat{scroll-margin-top:84px}
+.footer .contact-links{margin-bottom:0}
+@media(max-width:850px){
+  .nav{gap:8px}
+  .header-actions{gap:6px}
+  .header-actions .btn{font-size:12px;padding:7px 8px;min-height:38px}
+  .header-actions .contact-btn{display:inline-flex}
+}
