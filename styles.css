@@ -185,3 +185,5 @@
   .header-actions .contact-btn{display:inline-flex!important}
   .contact-bottom{padding-bottom:28px}
 }
+
+.legal-links{display:flex;gap:18px;justify-content:center;padding-top:18px;font-size:13px}.legal-links a{text-decoration:underline}.legal-page{max-width:820px}.legal-page h1{margin-top:0}.legal-page h2{margin-top:32px;font-size:24px}@media(max-width:850px){.legal-links{flex-wrap:wrap;gap:10px 18px}.legal-page{padding-bottom:20px}}
