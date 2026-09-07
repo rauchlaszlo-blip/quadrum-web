@@ -38,3 +38,17 @@
   .quote-note strong{font-size:23px;}
   .form .btn{font-size:21px;min-height:64px;padding:18px 22px;border-radius:8px;box-shadow:0 2px 0 rgba(255,255,255,.15) inset;}
 }
+
+/* Quote form emphasis on all screens */
+.quote-note{font-size:20px;line-height:1.45;margin:0 0 22px;color:#fff;}
+.quote-note strong{font-size:23px;}
+.form .btn{font-size:21px;min-height:64px;padding:18px 22px;font-weight:800;border-radius:8px;box-shadow:0 2px 0 rgba(255,255,255,.15) inset;}
+
+/* Contact section */
+.footer h2{color:#fff;margin-bottom:20px;}
+.contact-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0 0 28px;}
+.contact-links a{display:flex;flex-direction:column;gap:4px;padding:16px;border:1px solid #4d4742;background:#211d1a;color:#fff;min-width:0;}
+.contact-links a:hover{background:#2a2521;}
+.contact-links span{color:#ddd;overflow-wrap:anywhere;}
+@media(max-width:850px){.contact-links{grid-template-columns:1fr 1fr}.quote-note{font-size:20px}.quote-note strong{font-size:23px}.form .btn{font-size:21px;min-height:64px;}}
+@media(max-width:520px){.contact-links{grid-template-columns:1fr}}
