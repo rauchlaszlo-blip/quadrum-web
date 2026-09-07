@@ -12,3 +12,7 @@
 
 /* Force table parquet cards to true square dimensions at every viewport */
 #tabla .card .photo-img.small{width:calc(100% + 44px);height:auto!important;aspect-ratio:1 / 1!important;object-fit:cover;}
+
+/* True square image frame for table parquet cards */
+#tabla .square-photo{width:calc(100% + 44px);aspect-ratio:1/1;overflow:hidden;margin:-22px -22px 20px;border:1px solid var(--line);}
+#tabla .square-photo img{width:100%;height:100%;display:block;object-fit:cover;}
