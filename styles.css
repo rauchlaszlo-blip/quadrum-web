@@ -64,3 +64,12 @@
   }
   .sticky-mobile a:last-child{border-right:0}
 }
+
+/* Clear branded-style mobile contact symbols */
+@media(max-width:850px){
+ .sticky-mobile{display:grid!important;grid-template-columns:repeat(4,1fr)!important}
+ .contact-icon{width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:19px;line-height:1;border:2px solid currentColor}
+ .phone-icon,.mail-icon{font-size:21px}
+ .whatsapp-icon{font-size:12px;letter-spacing:-1px}
+ .messenger-icon{font-size:18px;font-style:italic}
+}
