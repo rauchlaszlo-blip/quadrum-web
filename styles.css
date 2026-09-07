@@ -199,3 +199,29 @@ a.btn, button.btn{cursor:pointer}
   a.btn:hover, button.btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.14)}
   .form .btn{border:2px solid #fff;background:#2a2520;color:#fff}
 }
+
+/* Final desktop quote submit button */
+@media(min-width:851px){
+  .form button[type="submit"].btn{
+    display:flex!important;
+    width:100%!important;
+    min-height:68px!important;
+    padding:18px 24px!important;
+    border:3px solid #ffffff!important;
+    outline:2px solid #2a2520!important;
+    background:#2a2520!important;
+    color:#ffffff!important;
+    border-radius:8px!important;
+    font-size:22px!important;
+    font-weight:800!important;
+    box-shadow:0 3px 8px rgba(0,0,0,.22)!important;
+    cursor:pointer!important;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease!important;
+  }
+  .form button[type="submit"].btn:hover{
+    background:#3a332d!important;
+    transform:translateY(-2px)!important;
+    box-shadow:0 6px 14px rgba(0,0,0,.28)!important;
+    cursor:pointer!important;
+  }
+}
