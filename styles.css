@@ -175,3 +175,13 @@
 @media(max-width:850px){
   .header-actions .contact-btn{display:inline-flex}
 }
+
+/* Final mobile contact navigation */
+.header-actions .contact-btn{display:none!important}
+.sticky-mobile{display:none!important}
+.contact-bottom{padding:24px 0 28px;background:#171411;color:#ddd}
+.contact-bottom .contact-links{margin:0}
+@media(max-width:850px){
+  .header-actions .contact-btn{display:inline-flex!important}
+  .contact-bottom{padding-bottom:28px}
+}
