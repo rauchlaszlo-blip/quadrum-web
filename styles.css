@@ -121,3 +121,39 @@
   .brand-main{font-size:21px;letter-spacing:.06em}
   .brand-sub{font-size:8px;letter-spacing:.28em;margin-top:2px}
 }
+
+/* Header wordmark correction */
+.header .brand{
+  display:grid !important;
+  grid-template-rows:auto auto;
+  align-content:center;
+  justify-items:start;
+  width:max-content;
+  min-width:max-content;
+  white-space:nowrap;
+  line-height:1;
+}
+.header .brand-main{
+  display:block;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;
+  font-weight:700;
+  letter-spacing:.10em;
+  line-height:.95;
+}
+.header .brand-sub{
+  display:block;
+  margin-top:6px;
+  padding-left:2px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.42em;
+  line-height:1;
+}
+@media(max-width:850px){
+  .nav{gap:10px}
+  .header .brand-main{font-size:22px;letter-spacing:.075em}
+  .header .brand-sub{font-size:7px;letter-spacing:.34em;margin-top:4px}
+  .header .btn{font-size:14px;padding:8px 10px;min-height:40px}
+}
