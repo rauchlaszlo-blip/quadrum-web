@@ -9,3 +9,6 @@
 
 /* Square table parquet images on desktop too */
 @media(min-width:851px){#tabla .photo-img.small{height:auto;aspect-ratio:1/1;object-fit:cover}}
+
+/* Force table parquet cards to true square dimensions at every viewport */
+#tabla .card .photo-img.small{width:calc(100% + 44px);height:auto!important;aspect-ratio:1 / 1!important;object-fit:cover;}
