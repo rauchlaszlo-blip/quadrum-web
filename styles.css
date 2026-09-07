@@ -52,3 +52,15 @@
 .contact-links span{color:#ddd;overflow-wrap:anywhere;}
 @media(max-width:850px){.contact-links{grid-template-columns:1fr 1fr}.quote-note{font-size:20px}.quote-note strong{font-size:23px}.form .btn{font-size:21px;min-height:64px;}}
 @media(max-width:520px){.contact-links{grid-template-columns:1fr}}
+
+/* Mobile bottom contact bar: four icon-only actions */
+@media(max-width:850px){
+  .sticky-mobile{grid-template-columns:repeat(4,1fr)}
+  .sticky-mobile a,.sticky-mobile a:last-child{
+    display:flex;align-items:center;justify-content:center;
+    min-height:56px;padding:10px;font-size:27px;line-height:1;
+    background:white;color:var(--dark);border-top:1px solid var(--line);
+    border-right:1px solid var(--line)
+  }
+  .sticky-mobile a:last-child{border-right:0}
+}
