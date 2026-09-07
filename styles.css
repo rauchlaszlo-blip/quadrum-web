@@ -6,3 +6,6 @@
 
 /* Mobile square images for table parquet cards only */
 @media(max-width:850px){#tabla .photo-img.small{height:auto;aspect-ratio:1/1;object-fit:cover}}
+
+/* Square table parquet images on desktop too */
+@media(min-width:851px){#tabla .photo-img.small{height:auto;aspect-ratio:1/1;object-fit:cover}}
