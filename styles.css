@@ -192,3 +192,10 @@
 
 .form-success{max-width:760px;margin:0 auto 24px;padding:18px 20px;border:1px solid #b9aa98;background:#f4eee6;font-size:17px;line-height:1.5}
 .form-success strong{font-size:21px}
+
+/* Make interactive actions clearly clickable on desktop */
+a.btn, button.btn{cursor:pointer}
+@media(min-width:851px){
+  a.btn:hover, button.btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.14)}
+  .form .btn{border:2px solid #fff;background:#2a2520;color:#fff}
+}
