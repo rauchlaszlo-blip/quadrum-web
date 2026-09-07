@@ -18,7 +18,7 @@
 <div class="size-row"><strong>Chevron</strong><span>Alapméret: 120×600 és 120×1200 mm</span><span>Egyedi méretben is rendelhető</span></div>
 <div class="size-row"><strong>Táblaparketta</strong><span>Alapméret: 500×500 és 600×600 mm</span><span>Egyedileg: akár 1100×1100 mm, és akár téglalap alakban is rendelhető</span></div>
 </div></details><details><summary>Hogyan történik a szállítás?</summary><p>A szállítást igény esetén külső fuvarozó partnerrel meg tudjuk szervezni, de a parketta saját szállítással is átvehető.</p></details><details><summary>Tudnak parkettást ajánlani?</summary><p>Igény esetén parkettás szakembert is tudunk ajánlani.</p></details></div></section>
-<section id="ajanlat" class="section contact"><div class="wrap grid2"><div><div class="eyebrow">Ajánlatkérés</div><h2>Beszéljünk a parkettájáról</h2><p class="quote-note"><strong>Nem kell minden kérdésre válaszolnia.</strong><br>Adja meg, amit már tud – a részleteket később egyeztetjük.</p></div><form class="form" action="https://formsubmit.co/info@quadrumparkett.com" method="POST" enctype="multipart/form-data">
+<section id="ajanlat" class="section contact"><div class="wrap"><div id="form-success" class="form-success" hidden><strong>Köszönjük az ajánlatkérést.</strong><br>Az üzenetet elküldtük. Hamarosan felvesszük Önnel a kapcsolatot.</div></div><div class="wrap grid2"><div><div class="eyebrow">Ajánlatkérés</div><h2>Beszéljünk a parkettájáról</h2><p class="quote-note"><strong>Nem kell minden kérdésre válaszolnia.</strong><br>Adja meg, amit már tud – a részleteket később egyeztetjük.</p></div><form class="form" action="https://formsubmit.co/info@quadrumparkett.com" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_subject" value="Új Quadrum Parketta ajánlatkérés">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_next" value="https://rauchlaszlo-blip.github.io/quadrum-web/?ajanlat=elkuldve#ajanlat">
@@ -36,4 +36,16 @@
 <button class="btn full" type="submit">Ajánlatot kérek</button>
 </form></div></section>
 </main><section id="kapcsolat" class="contact-bottom"><div class="wrap"><div class="contact-links"><a href="tel:+36309140384"><strong>Telefon</strong><span>+36 30 914 0384</span></a><a href="mailto:info@quadrumparkett.com"><strong>E-mail</strong><span>info@quadrumparkett.com</span></a><a href="https://wa.me/36309140384" target="_blank" rel="noopener"><strong>WhatsApp</strong><span>+36 30 914 0384</span></a><a href="https://m.me/quadrumparkett" target="_blank" rel="noopener"><strong>Messenger</strong><span>quadrumparkett</span></a></div></div><div class="legal-links"><a href="impresszum.html">Impresszum</a><a href="adatkezeles.html">Adatkezelési tájékoztató</a></div></section>
-</body></html>
+<script>
+(function(){
+  const params=new URLSearchParams(window.location.search);
+  if(params.get('ajanlat')==='elkuldve'){
+    const box=document.getElementById('form-success');
+    if(box){
+      box.hidden=false;
+      setTimeout(()=>box.scrollIntoView({behavior:'smooth',block:'center'}),150);
+    }
+    history.replaceState({},document.title,window.location.pathname+'#ajanlat');
+  }
+})();
+</script></body></html>
