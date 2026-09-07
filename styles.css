@@ -169,3 +169,9 @@
   .header-actions .btn{font-size:12px;padding:7px 8px;min-height:38px}
   .header-actions .contact-btn{display:inline-flex}
 }
+
+/* Contact button: mobile only */
+.header-actions .contact-btn{display:none}
+@media(max-width:850px){
+  .header-actions .contact-btn{display:inline-flex}
+}
