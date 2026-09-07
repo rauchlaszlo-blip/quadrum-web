@@ -225,3 +225,7 @@ a.btn, button.btn{cursor:pointer}
     cursor:pointer!important;
   }
 }
+
+/* Square Deg Natur photo in the parquet chooser */
+#parkettak .square-photo{width:100%;aspect-ratio:1 / 1;overflow:hidden;margin:0 0 20px;background:#fff;}
+#parkettak .square-photo img{display:block;width:100%;height:100%;object-fit:contain;}
