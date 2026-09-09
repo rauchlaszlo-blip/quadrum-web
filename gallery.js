@@ -18,7 +18,7 @@
     },
     alakos: {
       title: "Alakos táblaparketta",
-      images: ["images/figura-selected.webp","images/gallery/tablaparketta-04.webp","images/gallery/tablaparketta-05.webp","images/gallery/tablaparketta-06.webp","images/gallery/tablaparketta-07.webp","images/gallery/tablaparketta-08.webp"]
+      images: ["images/gallery/tablaparketta-06.webp","images/gallery/tablaparketta-04.webp","images/gallery/tablaparketta-05.webp","images/figura-selected.webp","images/gallery/tablaparketta-07.webp","images/gallery/tablaparketta-08.webp"]
     },
     moire: {
       title: "Moiré táblaparketta",
