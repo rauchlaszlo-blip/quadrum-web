@@ -235,7 +235,7 @@ a.btn, button.btn{cursor:pointer}
 .floating-quote{display:none}
 @media(max-width:850px){
   .floating-quote{
-    display:flex;position:fixed;right:12px;top:33%;z-index:40;
+    display:flex;position:fixed;right:12px;top:22%;z-index:40;
     min-height:48px;padding:12px 16px;align-items:center;justify-content:center;
     border:2px solid #fff;border-radius:999px;background:var(--dark);color:#fff;
     font-size:15px;font-weight:800;box-shadow:0 4px 16px rgba(0,0,0,.28)
