@@ -244,3 +244,7 @@ a.btn, button.btn{cursor:pointer}
 
 /* Keep process numbering continuous */
 .steps{counter-reset:s}
+
+.price{cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.price:hover,.price:focus-visible{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12);border-color:var(--wood)}
+#svedpadlo,#chevron,#tablaparketta{scroll-margin-top:96px}
