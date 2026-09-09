@@ -10,7 +10,7 @@
     },
     tablaparketta: {
       title: "Táblaparketta",
-      images: ["images/deg-natur.png","images/gallery/tablaparketta-01.webp","images/gallery/tablaparketta-02.webp","images/gallery/tablaparketta-03.webp","images/gallery/tablaparketta-04.webp","images/gallery/tablaparketta-05.webp","images/gallery/tablaparketta-06.webp","images/gallery/tablaparketta-07.webp","images/gallery/tablaparketta-08.webp","images/gallery/tablaparketta-09.webp","images/gallery/tablaparketta-10.webp","images/gallery/tablaparketta-11.webp","images/gallery/tablaparketta-12.webp","images/gallery/tablaparketta-13.webp","images/gallery/tablaparketta-14.webp","images/gallery/tablaparketta-15.webp"]
+      images: ["images/deg-natur.png","images/gallery/tablaparketta-01.webp","images/gallery/tablaparketta-02.webp","images/gallery/tablaparketta-03.webp","images/gallery/tablaparketta-04.webp","images/gallery/tablaparketta-05.webp","images/gallery/tablaparketta-06.webp","images/gallery/tablaparketta-07.webp","images/gallery/tablaparketta-08.webp","images/gallery/tablaparketta-09.webp","images/gallery/tablaparketta-10.webp","images/gallery/tablaparketta-11.webp","images/gallery/tablaparketta-12.webp","images/gallery/tablaparketta-13.webp","images/gallery/tablaparketta-14.webp","images/gallery/tablaparketta-15.webp","images/gallery/tablaparketta-03.webp"]
     },
     geometrikus: {
       title: "Geometrikus táblaparketta",
@@ -22,7 +22,7 @@
     },
     moire: {
       title: "Moiré táblaparketta",
-      images: ["images/moire-selected.webp","images/gallery/tablaparketta-01.webp","images/gallery/tablaparketta-02.webp","images/gallery/tablaparketta-03.webp"]
+      images: ["images/moire-selected.webp","images/gallery/tablaparketta-01.webp","images/gallery/tablaparketta-02.webp"]
     }
   };
   const modal = document.getElementById("product-gallery");
