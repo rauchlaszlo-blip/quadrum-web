@@ -268,7 +268,7 @@ a.btn, button.btn{cursor:pointer}
 .gallery-hint{position:absolute;right:12px;bottom:12px;padding:7px 11px;border-radius:999px;background:rgba(25,20,16,.82);color:#fff;font-size:13px;font-weight:700;line-height:1;box-shadow:0 2px 10px rgba(0,0,0,.2)}
 .gallery-modal{position:fixed;inset:0;z-index:10000;display:grid;grid-template-columns:minmax(48px,80px) minmax(0,1fr) minmax(48px,80px);align-items:center;background:rgba(10,8,7,.96);padding:24px}
 .gallery-stage{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;height:calc(100vh - 48px)}
-.gallery-image{display:block;max-width:100%;max-height:calc(100vh - 110px);width:auto;height:auto;object-fit:contain;box-shadow:0 8px 34px rgba(0,0,0,.35)}
+.gallery-image{display:block;max-width:100%;max-height:calc(100vh - 110px);width:auto;height:auto;object-fit:contain;box-shadow:0 8px 34px rgba(0,0,0,.35);transition:transform .22s ease,opacity .22s ease;will-change:transform,opacity;touch-action:pan-y}
 .gallery-caption{width:100%;max-width:1000px;display:flex;justify-content:space-between;gap:20px;padding-top:14px;color:#fff;font-size:15px}
 .gallery-close,.gallery-nav{border:0;background:rgba(255,255,255,.14);color:#fff;cursor:pointer}
 .gallery-close{position:absolute;top:16px;right:18px;z-index:2;width:46px;height:46px;border-radius:50%;font-size:34px;line-height:42px}
@@ -276,10 +276,10 @@ a.btn, button.btn{cursor:pointer}
 .gallery-nav:hover,.gallery-close:hover{background:rgba(255,255,255,.25)}
 body.gallery-open{overflow:hidden}
 @media(max-width:700px){
- .gallery-modal{grid-template-columns:44px minmax(0,1fr) 44px;padding:12px 4px}
+ .gallery-modal{grid-template-columns:minmax(0,1fr);padding:12px 4px}
  .gallery-stage{height:calc(100vh - 24px)}
  .gallery-image{max-height:calc(100vh - 90px)}
- .gallery-nav{width:40px;height:58px;font-size:42px;background:rgba(255,255,255,.18)}
+ .gallery-nav{display:none}
  .gallery-close{top:10px;right:10px;width:42px;height:42px;font-size:30px}
  .gallery-caption{padding:10px 6px 0;font-size:14px}
  .gallery-hint{right:9px;bottom:9px;font-size:12px}
