@@ -14,7 +14,7 @@
     },
     geometrikus: {
       title: "Geometrikus táblaparketta",
-      images: ["images/geometrikus-selected.webp","images/gallery/tablaparketta-09.webp","images/gallery/tablaparketta-10.webp","images/gallery/tablaparketta-11.webp","images/gallery/tablaparketta-12.webp","images/gallery/tablaparketta-13.webp","images/gallery/tablaparketta-14.webp","images/gallery/tablaparketta-15.webp"]
+      images: ["images/geometrikus-selected.webp","images/gallery/tablaparketta-09.webp","images/gallery/tablaparketta-10.webp","images/gallery/tablaparketta-11.webp","images/gallery/tablaparketta-12.webp","images/gallery/tablaparketta-13.webp","images/gallery/tablaparketta-14.webp","images/gallery/tablaparketta-15.webp","images/gallery/tablaparketta-03.webp"]
     },
     alakos: {
       title: "Alakos táblaparketta",
