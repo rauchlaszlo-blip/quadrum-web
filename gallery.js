@@ -19,7 +19,7 @@
   const title = modal.querySelector("#gallery-title");
   const counter = modal.querySelector(".gallery-counter");
   const closeButton = modal.querySelector(".gallery-close");
-  let active = null, index = 0, lastFocus = null, touchX = null;
+  let active = null, index = 0, lastFocus = null, touchX = null, touchCurrentX = null, animating = false;
 
   function show(nextIndex) {
     if (!active) return;
@@ -55,12 +55,51 @@
   modal.querySelector(".gallery-next").addEventListener("click", () => show(index + 1));
   closeButton.addEventListener("click", closeGallery);
   modal.addEventListener("click", event => { if (event.target === modal) closeGallery(); });
-  modal.addEventListener("touchstart", event => { touchX = event.changedTouches[0].clientX; }, {passive:true});
-  modal.addEventListener("touchend", event => {
-    if (touchX === null) return;
-    const delta = event.changedTouches[0].clientX - touchX;
-    if (Math.abs(delta) > 45) show(index + (delta < 0 ? 1 : -1));
-    touchX = null;
+  function resetImagePosition() {
+    image.style.transition = "transform .22s ease, opacity .22s ease";
+    image.style.transform = "translateX(0)";
+    image.style.opacity = "1";
+  }
+  function animateSwipe(direction) {
+    if (animating || !active) return;
+    animating = true;
+    image.style.transition = "transform .18s ease, opacity .18s ease";
+    image.style.transform = "translateX(" + (direction > 0 ? "-110vw" : "110vw") + ")";
+    image.style.opacity = ".15";
+    window.setTimeout(() => {
+      show(index + direction);
+      image.style.transition = "none";
+      image.style.transform = "translateX(" + (direction > 0 ? "55px" : "-55px") + ")";
+      image.style.opacity = "0";
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        resetImagePosition();
+        window.setTimeout(() => { animating = false; }, 230);
+      }));
+    }, 180);
+  }
+  modal.addEventListener("touchstart", event => {
+    if (animating) return;
+    touchX = touchCurrentX = event.changedTouches[0].clientX;
+    image.style.transition = "none";
+  }, {passive:true});
+  modal.addEventListener("touchmove", event => {
+    if (touchX === null || animating) return;
+    touchCurrentX = event.changedTouches[0].clientX;
+    const delta = touchCurrentX - touchX;
+    image.style.transform = "translateX(" + delta + "px)";
+    image.style.opacity = String(Math.max(.55, 1 - Math.abs(delta) / 500));
+    event.preventDefault();
+  }, {passive:false});
+  modal.addEventListener("touchend", () => {
+    if (touchX === null || animating) return;
+    const delta = (touchCurrentX ?? touchX) - touchX;
+    touchX = touchCurrentX = null;
+    if (Math.abs(delta) > 45) animateSwipe(delta < 0 ? 1 : -1);
+    else resetImagePosition();
+  }, {passive:true});
+  modal.addEventListener("touchcancel", () => {
+    touchX = touchCurrentX = null;
+    resetImagePosition();
   }, {passive:true});
   document.addEventListener("keydown", event => {
     if (modal.hidden) return;
