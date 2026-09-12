@@ -1,16 +1,4 @@
 (() => {
-  const hero = document.querySelector(".hero");
-  if (hero) {
-    const heading = hero.querySelector("h1");
-    const lead = hero.querySelector(".lead");
-    const actions = hero.querySelector(".actions");
-    if (heading) heading.textContent = "Egyedi mintás valódi fa parketta közvetlenül a gyártótól";
-    if (lead) lead.textContent = "Válasszon meglévő mintáink közül, vagy küldje el saját rajzát, fotóját, elképzelését. Svédpadló, Chevron és táblaparketta saját gyártásból.";
-    if (actions) {
-      actions.innerHTML = '<a class="btn" href="#ajanlat">Ajánlatot kérek</a><a class="btn alt" href="#parkettak">Megnézem a parkettákat</a>';
-    }
-  }
-
   const galleries = {
     svedpadlo: {
       title: "Svédpadló",
