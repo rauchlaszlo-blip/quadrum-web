@@ -1,34 +1,4 @@
 (() => {
-  document.addEventListener("DOMContentLoaded", () => {
-    const actions = document.querySelector(".hero .actions");
-    if (!actions) return;
-
-    function scrollToTarget(id, fallbackSelector) {
-      const target = document.getElementById(id) || document.querySelector(fallbackSelector);
-      if (!target) return;
-      const header = document.querySelector(".header");
-      const offset = (header ? header.offsetHeight : 0) + 12;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
-    }
-
-    const links = actions.querySelectorAll("a");
-    if (links[0]) {
-      links[0].setAttribute("href", "#ajanlat");
-      links[0].onclick = event => {
-        event.preventDefault();
-        scrollToTarget("ajanlat", "form.form");
-      };
-    }
-    if (links[1]) {
-      links[1].setAttribute("href", "#parkettak");
-      links[1].onclick = event => {
-        event.preventDefault();
-        scrollToTarget("parkettak", "#parkettak");
-      };
-    }
-  });
-
   const galleries = {
     svedpadlo: {
       title: "Svédpadló",
