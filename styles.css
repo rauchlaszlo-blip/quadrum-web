@@ -284,3 +284,8 @@ body.gallery-open{overflow:hidden}
  .gallery-caption{padding:10px 6px 0;font-size:14px}
  .gallery-hint{right:9px;bottom:9px;font-size:12px}
 }
+
+.starting-price{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;margin:26px 0 8px;padding:14px 20px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--wood);box-shadow:0 10px 26px rgba(73,50,31,.09)}
+.starting-price-label{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--wood)}
+.starting-price strong{font-family:Georgia,serif;font-size:28px;line-height:1.2}
+@media(max-width:850px){.starting-price{display:flex;width:100%;margin:20px 0 8px;padding:12px 16px}.starting-price strong{font-size:25px}}
