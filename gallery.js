@@ -1,8 +1,10 @@
 (() => {
-  const isGerman = document.documentElement.lang === "de";
+  const language = document.documentElement.lang;
+  const isGerman = language === "de";
+  const isEnglish = language === "en";
   const galleries = {
     svedpadlo: {
-      title: isGerman ? "Landhausdielen" : "Svédpadló",
+      title: isGerman ? "Landhausdielen" : isEnglish ? "Engineered wood planks" : "Svédpadló",
       images: ["images/svedpadlo.jpg","images/gallery/svedpadlo-01.webp","images/gallery/svedpadlo-02.webp","images/gallery/svedpadlo-03.webp","images/gallery/svedpadlo-04.webp","images/gallery/svedpadlo-05.webp","images/gallery/svedpadlo-06.webp","images/gallery/svedpadlo-07.webp"]
     },
     chevron: {
@@ -10,19 +12,19 @@
       images: ["images/chevron-selected.webp","images/gallery/chevron-01.webp","images/gallery/chevron-02.webp","images/gallery/chevron-03.webp","images/gallery/chevron-04.webp","images/gallery/chevron-05.webp","images/gallery/chevron-06.webp"]
     },
     tablaparketta: {
-      title: isGerman ? "Tafelparkett" : "Táblaparketta",
+      title: isGerman ? "Tafelparkett" : isEnglish ? "Panel parquet" : "Táblaparketta",
       images: ["images/deg-natur.png","images/gallery/tablaparketta-01.webp","images/gallery/tablaparketta-02.webp","images/gallery/tablaparketta-03.webp","images/gallery/tablaparketta-04.webp","images/gallery/tablaparketta-05.webp","images/gallery/tablaparketta-06.webp","images/gallery/tablaparketta-07.webp","images/gallery/tablaparketta-08.webp","images/gallery/tablaparketta-09.webp","images/gallery/tablaparketta-10.webp","images/gallery/tablaparketta-11.webp","images/gallery/tablaparketta-12.webp","images/gallery/tablaparketta-13.webp","images/gallery/tablaparketta-14.webp","images/gallery/tablaparketta-15.webp","images/gallery/tablaparketta-03.webp"]
     },
     geometrikus: {
-      title: isGerman ? "Geometrisches Tafelparkett" : "Geometrikus táblaparketta",
+      title: isGerman ? "Geometrisches Tafelparkett" : isEnglish ? "Geometric panel parquet" : "Geometrikus táblaparketta",
       images: ["images/geometrikus-selected.webp","images/gallery/tablaparketta-09.webp","images/gallery/tablaparketta-10.webp","images/gallery/tablaparketta-11.webp","images/gallery/tablaparketta-12.webp","images/gallery/tablaparketta-13.webp","images/gallery/tablaparketta-14.webp","images/gallery/tablaparketta-15.webp","images/gallery/tablaparketta-03.webp"]
     },
     alakos: {
-      title: isGerman ? "Figürliches Tafelparkett" : "Alakos táblaparketta",
+      title: isGerman ? "Figürliches Tafelparkett" : isEnglish ? "Figurative panel parquet" : "Alakos táblaparketta",
       images: ["images/gallery/tablaparketta-06.webp","images/gallery/tablaparketta-04.webp","images/gallery/tablaparketta-05.webp","images/figura-selected.webp","images/gallery/tablaparketta-07.webp","images/gallery/tablaparketta-08.webp"]
     },
     moire: {
-      title: isGerman ? "Moiré-Tafelparkett" : "Moiré táblaparketta",
+      title: isGerman ? "Moiré-Tafelparkett" : isEnglish ? "Moiré panel parquet" : "Moiré táblaparketta",
       images: ["images/moire-selected.webp","images/gallery/tablaparketta-01.webp","images/gallery/tablaparketta-02.webp"]
     }
   };
@@ -38,7 +40,7 @@
     if (!active) return;
     index = (nextIndex + active.images.length) % active.images.length;
     image.src = active.images[index];
-    image.alt = active.title + " – " + (index + 1) + (isGerman ? ". Foto" : ". fotó");
+    image.alt = active.title + " – " + (index + 1) + (isGerman ? ". Foto" : isEnglish ? ". photo" : ". fotó");
     title.textContent = active.title;
     counter.textContent = (index + 1) + " / " + active.images.length;
     [-1, 1].forEach(step => {

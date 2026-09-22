@@ -15,7 +15,7 @@
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window,document,"clarity","script",projectId);
     window.clarity("consentv2",{ad_Storage:"denied",analytics_Storage:"granted"});
-    if(location.pathname.endsWith("/koszonjuk.html")||location.pathname.endsWith("/de/danke.html")) track("ajanlat_elkuldve");
+    if(location.pathname.endsWith("/koszonjuk.html")||location.pathname.endsWith("/de/danke.html")||location.pathname.endsWith("/en/thank-you.html")) track("ajanlat_elkuldve");
   }
 
   function setConsent(value){
@@ -28,10 +28,14 @@
     if(document.querySelector(".consent-banner")) return;
     const box=document.createElement("aside");
     box.className="consent-banner";
-    const isGerman=document.documentElement.lang==="de";
-    box.setAttribute("aria-label",isGerman?"Einstellungen zur Besuchermessung":"Látogatottságmérési beállítások");
+    const language=document.documentElement.lang;
+    const isGerman=language==="de";
+    const isEnglish=language==="en";
+    box.setAttribute("aria-label",isGerman?"Einstellungen zur Besuchermessung":isEnglish?"Visitor measurement settings":"Látogatottságmérési beállítások");
     box.innerHTML=isGerman
       ? '<div><strong>Helfen Sie uns, die Website zu verbessern?</strong><p>Mit Ihrer Einwilligung messen wir anonymisierte Besuchs- und Nutzungsdaten mit Microsoft Clarity.</p><a href="../adatkezeles.html">Datenschutzerklärung (Ungarisch)</a></div><div class="consent-actions"><button type="button" data-consent="declined">Ablehnen</button><button type="button" class="accept" data-consent="accepted">Akzeptieren</button></div>'
+      : isEnglish
+      ? '<div><strong>Help us improve the website</strong><p>With your consent, we measure anonymised visitor and usage data using Microsoft Clarity.</p><a href="../adatkezeles.html">Privacy Notice (Hungarian)</a></div><div class="consent-actions"><button type="button" data-consent="declined">Decline</button><button type="button" class="accept" data-consent="accepted">Accept</button></div>'
       : '<div><strong>Segít jobbá tenni az oldalt?</strong><p>Hozzájárulás esetén névtelenített látogatottsági és használati adatokat mérünk a Microsoft Clarity segítségével.</p><a href="adatkezeles.html">Adatkezelési tájékoztató</a></div><div class="consent-actions"><button type="button" data-consent="declined">Elutasítom</button><button type="button" class="accept" data-consent="accepted">Elfogadom</button></div>';
     box.addEventListener("click",function(e){
       const value=e.target.getAttribute("data-consent");
@@ -46,7 +50,7 @@
     const button=document.createElement("button");
     button.type="button";
     button.className="consent-settings";
-    button.textContent=document.documentElement.lang==="de"?"Messeinstellungen":"Mérési beállítások";
+    button.textContent=document.documentElement.lang==="de"?"Messeinstellungen":document.documentElement.lang==="en"?"Measurement settings":"Mérési beállítások";
     button.addEventListener("click",showConsent);
     legal.appendChild(button);
   }

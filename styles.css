@@ -5,23 +5,23 @@
 @media(min-width:851px){.photo-img{height:330px}.photo-img.hero-photo{height:360px}.photo-img.small{height:180px}}
 
 /* Mobile square images for table parquet cards only */
-@media(max-width:850px){#tabla .photo-img.small,#tafelparkett .photo-img.small{height:auto;aspect-ratio:1/1;object-fit:cover}}
+@media(max-width:850px){#tabla .photo-img.small,#tafelparkett .photo-img.small,#panel-parquet .photo-img.small{height:auto;aspect-ratio:1/1;object-fit:cover}}
 
 /* Square table parquet images on desktop too */
-@media(min-width:851px){#tabla .photo-img.small,#tafelparkett .photo-img.small{height:auto;aspect-ratio:1/1;object-fit:cover}}
+@media(min-width:851px){#tabla .photo-img.small,#tafelparkett .photo-img.small,#panel-parquet .photo-img.small{height:auto;aspect-ratio:1/1;object-fit:cover}}
 
 /* Force table parquet cards to true square dimensions at every viewport */
-#tabla .card .photo-img.small,#tafelparkett .card .photo-img.small{width:calc(100% + 44px);height:auto!important;aspect-ratio:1 / 1!important;object-fit:cover;}
+#tabla .card .photo-img.small,#tafelparkett .card .photo-img.small,#panel-parquet .card .photo-img.small{width:calc(100% + 44px);height:auto!important;aspect-ratio:1 / 1!important;object-fit:cover;}
 
 /* True square image frame for table parquet cards */
-#tabla .square-photo,#tafelparkett .square-photo{width:calc(100% + 44px);aspect-ratio:1/1;overflow:hidden;margin:-22px -22px 20px;border:1px solid var(--line);}
-#tabla .square-photo img,#tafelparkett .square-photo img{width:100%;height:100%;display:block;object-fit:cover;}
+#tabla .square-photo,#tafelparkett .square-photo,#panel-parquet .square-photo{width:calc(100% + 44px);aspect-ratio:1/1;overflow:hidden;margin:-22px -22px 20px;border:1px solid var(--line);}
+#tabla .square-photo img,#tafelparkett .square-photo img,#panel-parquet .square-photo img{width:100%;height:100%;display:block;object-fit:cover;}
 
 /* Desktop table parquet: keep all 3 square photos inside their cards */
 @media(min-width:851px){
-  #tabla .grid3 > .card,#tafelparkett .grid3 > .card{min-width:0;}
-  #tabla .square-photo,#tafelparkett .square-photo{width:100%;margin:0 0 20px;aspect-ratio:1/1;overflow:hidden;}
-  #tabla .square-photo img,#tafelparkett .square-photo img{width:100%;height:100%;object-fit:cover;}
+  #tabla .grid3 > .card,#tafelparkett .grid3 > .card,#panel-parquet .grid3 > .card{min-width:0;}
+  #tabla .square-photo,#tafelparkett .square-photo,#panel-parquet .square-photo{width:100%;margin:0 0 20px;aspect-ratio:1/1;overflow:hidden;}
+  #tabla .square-photo img,#tafelparkett .square-photo img,#panel-parquet .square-photo img{width:100%;height:100%;object-fit:cover;}
 }
 
 /* Quote form reassurance */
@@ -227,8 +227,8 @@ a.btn, button.btn{cursor:pointer}
 }
 
 /* Square Deg Natur photo in the parquet chooser */
-#parkettak .square-photo,#parkett .square-photo{width:100%;aspect-ratio:1 / 1;overflow:hidden;margin:0 0 20px;background:#fff;}
-#parkettak .square-photo img,#parkett .square-photo img{display:block;width:100%;height:100%;object-fit:contain;}
+#parkettak .square-photo,#parkett .square-photo,#parquet .square-photo{width:100%;aspect-ratio:1 / 1;overflow:hidden;margin:0 0 20px;background:#fff;}
+#parkettak .square-photo img,#parkett .square-photo img,#parquet .square-photo img{display:block;width:100%;height:100%;object-fit:contain;}
 
 
 /* Persistent mobile quote action */
