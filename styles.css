@@ -47,11 +47,14 @@
 /* Contact section */
 .footer h2{color:#fff;margin-bottom:20px;}
 .contact-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0 0 28px;}
+.contact-links.contact-links-three{grid-template-columns:repeat(3,minmax(0,1fr));}
 .contact-links a{display:flex;flex-direction:column;gap:4px;padding:16px;border:1px solid #4d4742;background:#211d1a;color:#fff;min-width:0;}
 .contact-links a:hover{background:#2a2521;}
 .contact-links span{color:#ddd;overflow-wrap:anywhere;}
 @media(max-width:850px){.contact-links{grid-template-columns:1fr 1fr}.quote-note{font-size:20px}.quote-note strong{font-size:23px}.form .btn{font-size:21px;min-height:64px;}}
+@media(max-width:850px){.contact-links.contact-links-three{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.contact-links{grid-template-columns:1fr}}
+@media(max-width:520px){.contact-links.contact-links-three{grid-template-columns:1fr}}
 
 /* Mobile bottom contact bar: four icon-only actions */
 @media(max-width:850px){
